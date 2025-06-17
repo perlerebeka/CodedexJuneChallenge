@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Home from "./components/home";
+import PlantInput from "./components/input";
+import PlantManager from "./components/plantManager";
+import "./App.css";
+import "@fontsource/pixelify-sans"
+import "@fontsource/pixelify-sans/400.css"
+import "@fontsource/pixelify-sans/700.css"
+
 
 function App() {
+  const [screen, setScreen] = useState("home");
+  const [plantData, setPlantData] = useState(null);
+
+  // Dummy handler for plant submission
+  const handlePlantSubmit = (data) => {
+    setPlantData(data);
+    setScreen("manager");
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app-bg">
+      {screen === "home" && <Home onAddPlant={() => setScreen("input")} />}
+      {screen === "input" && (
+        <PlantInput onSubmit={handlePlantSubmit} onBack={() => setScreen("home")} />
+      )}
+      {screen === "manager" && plantData && (
+        <PlantManager plant={plantData} onBack={() => setScreen("home")} />
+      )}
     </div>
   );
 }
