@@ -28,8 +28,8 @@ export function BeeOne() {
         alt="Bee"
         style={{ width: 40, height: 40, position: "absolute", top: 30 }}
         animate={{
-          x: [700, -600],
-          y: [190, 10],           
+          x: [500, -600],
+          y: [190, 140],           
         }}
         transition={{
           duration: 6,
@@ -50,7 +50,7 @@ export function BeeTwo() {
         alt="Bee"
         style={{ width: 60, height: 60, position: "absolute", top: 30 }}
         animate={{
-          x: [-800, 600],
+          x: [-600, 500],
           y: [300, -40],
           rotate: [-20]           // move from 0 to 200
         }}

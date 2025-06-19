@@ -22,7 +22,7 @@ function App() {
     <div className="app-bg">
       {screen === "home" && <Home onAddPlant={() => setScreen("input")} />}
       {screen === "input" && (
-        <PlantInput onSubmit={handlePlantSubmit} onBack={() => setScreen("home")} />
+        <PlantInput onceSubmitted={handlePlantSubmit} onBack={() => setScreen("home")} />
       )}
       {screen === "manager" && plantData && (
         <PlantManager plant={plantData} onBack={() => setScreen("home")} />
