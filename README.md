@@ -21,6 +21,9 @@ The core functionality is working (API integration, custom visuals, search & tip
 Some cosmetic features are unfinished, but the app already demonstrates the main idea and design.
 
 ## 📸 Screenshots / Demo
+https://github.com/perlerebeka/CodedexJuneChallenge/blob/master/screenshots/KeepMeAlive_home.PNG
+https://github.com/perlerebeka/CodedexJuneChallenge/blob/master/screenshots/KeepMeAlive_infoPage.PNG
+https://github.com/perlerebeka/CodedexJuneChallenge/blob/master/screenshots/KeepMeAlive_input.PNG
 
 
 ## 🎨 Credits
